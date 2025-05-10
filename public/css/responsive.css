@@ -1,0 +1,146 @@
+/* Gaya untuk layar lebar (desktop) */
+@media (min-width: 801px) {
+    .item-menu {
+        flex: 1 1 calc(30% - 20px);
+        max-width: 30%;
+    }
+
+    .item-menu img {
+        max-width: 100%;
+    }
+
+    .item-menu h3 {
+        font-size: 1.5rem;
+    }
+
+    .item-menu p {
+        font-size: 1rem;
+    }
+
+    .item-menu span {
+        font-size: 1.2rem;
+    }
+
+    header h2 {
+        display: block;
+        font-size: 2rem;
+    }
+}
+
+/* Gaya untuk layar sedang (tablet) */
+@media (min-width: 451px) and (max-width: 800px) {
+    .menu-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .item-menu {
+        flex: 1 1 calc(50% - 20px);
+        margin-bottom: 20px;
+        max-width: 31%;
+    }
+
+    .item-menu img {
+        max-width: 100%;
+    }
+
+    .item-menu h3 {
+        font-size: 1.3rem;
+    }
+
+    .item-menu p {
+        font-size: 0.9rem;
+    }
+
+    .item-menu span {
+        font-size: 1rem;
+    }
+
+    header h2 {
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    .logo img {
+        max-width: 120px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+}
+
+/* Gaya untuk layar kecil (ponsel) */
+@media (max-width: 450px) {
+    .menu-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-menu {
+        width: 100%; 
+        margin-bottom: 20px;
+        max-width: 65%;
+    }
+
+    .item-menu img {
+        max-width: 100%;
+    }
+
+    .item-menu h3 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .item-menu p {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .item-menu span {
+        font-size: 0.9rem;
+        text-align: center;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .menu-actions {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    header h2 {
+        display: none;
+    }
+
+    .logo img {
+        max-width: 100px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 8px 15px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}

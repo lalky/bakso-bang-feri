@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Aplikasi pemesanan makanan modern dengan fitur popup interaktif, keranjang dinamis, dan integrasi gateway pembayaran untuk pengalaman belanja cepat dan nyaman.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Bilal Az-Zaqi">
+    <title>Bakso Tetelan dan Mie Yamin Bang Feri</title>
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="/public/css/responsive.css">
+    <link rel="icon" type="image.png" sizes="32x32" href="/public/images/logo.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/public/images/logo.png" alt="Bakso Tetelan dan Mie Yamin Bang Feri">
+            </div>
+            <h2>Mie Yamin Bangka Dan Bakso Tetelan Bang Feri</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about" onclick="smoothScroll()">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Mie Yamin Bangka Dan Bakso Tetelan Bang Feri</h1>
+            <p>Lezat dan Mengenyangkan,Sajian Terbaik Kami Untuk Anda</p>
+            <a href="#menu" class="btn">Lihat Menu</a>
+        </div>
+    </section>
+
+    <!-- Highlight Menu Section-->
+     <section class="highlight-menu">
+        <h2>Menu Terbaik Kami</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="/public/images/menu-item1.jpg" alt="Bakso Tetelan">
+                <h3>Bakso Tetelan</h3>
+                <p>Bakso dengan tetelan daging sapi yang kaya rasa, disajikan dengan kuah kaldu spesial.</p>
+            </div>
+            <div class="menu-item">
+                <img src="/public/images/menu-item2.jpg" alt="Mie Yamin Bangka">
+                <h3>Mie Yamin Bangka</h3>
+                <p>Mie kenyal dengan bumbu yamin manis yang menggoda,dilengkapi dengan topping istimewa.</p>
+            </div>
+        </div>
+     </section>
+
+     <!-- Daftar Menu Section -->
+      <section id="menu" class="daftar-menu">
+        <div class="container">
+            <h2>Menu Kami</h2>
+            <div class="menu-list">
+                <div class="item-menu" data-id="menu1">
+                    <img src="/public/images/menu1.jpg" alt="Bakso Halus">
+                    <h3>Bakso Halus</h3>
+                    <p>Bakso Halus yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 18.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="addToCartFromItem(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu2">
+                    <img src="/public/images/menu2.jpg" alt="Bakso Urat">
+                    <h3>Bakso Urat</h3>
+                    <p>Bakso Urat yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 18.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="addToCartFromItem(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu3">
+                    <img src="/public/images/menu3.jpg" alt="Bakso Telur">
+                    <h3>Bakso Telur</h3>
+                    <p>Bakso Telur yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 20.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu4">
+                    <img src="/public/images/menu4.jpg" alt="Bakso Jumbo">
+                    <h3>Bakso Jumbo Isi Daging</h3>
+                    <p>Bakso Jumbo yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 20.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu5">
+                    <img src="/public/images/menu5.jpg" alt="Bakso Urat Besar">
+                    <h3>Bakso Urat Besar</h3>
+                    <p>Bakso Urat yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 20.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu6">
+                    <img src="/public/images/menu6.jpg" alt="Bakso Dua Urat">
+                    <h3>Bakso Dua Urat</h3>
+                    <p>Bakso Dua Urat yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 20.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu7">
+                    <img src="/public/images/menu7.jpg" alt="Bakso Tiga Urat">
+                    <h3>Bakso Tiga Urat</h3>
+                    <p>Bakso Tiga Urat yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 22.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu8">
+                    <img src="/public/images/menu8.jpg" alt="Bakso Urat + Telur">
+                    <h3>Bakso Urat + Telur</h3>
+                    <p>Bakso brutal yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 20.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu9">
+                    <img src="/public/images/menu9.jpg" alt="Bakso Brutal">
+                    <h3>Bakso Brutal</h3>
+                    <p>Bakso brutal yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 38.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu10">
+                    <img src="/public/images/menu10.jpg" alt="Mie Ayam/Yamin">
+                    <h3>Mie Ayam/Yamin</h3>
+                    <p>Mie ayam/yamin yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 15.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu11">
+                    <img src="/public/images/menu11.jpg" alt="Mie Ayam/Yamin + Telur">
+                    <h3>Mie Ayam/Yamin Bakso</h3>
+                    <p>Mie ayam/yamin bakso yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 20.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu12">
+                    <img src="/public/images/menu12.jpg" alt="Mie Ayam/Yamin + Pangsit">
+                    <h3>Mie Ayam/Yamin Pangsit</h3>
+                    <p>Mie ayam/yamin pangsit yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 20.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu13">
+                    <img src="/public/images/menu13.jpg" alt="Mie Ayam/Yamin + Tetelan">
+                    <h3>Mie Ayam/Yamin Tetelan</h3>
+                    <p>Mie ayam/yamin tetelan yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 22.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu14">
+                    <img src="/public/images/menu14.jpg" alt="Mie Ayam/Yamin Spesial">
+                    <h3>Mie Ayam/Yamin Spesial</h3>
+                    <p>Mie ayam/yamin spesial yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 25.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu15">
+                    <img src="/public/images/menu15.jpg" alt="Mie Ayam/Yamin Bang Feri">
+                    <h3>Mie Ayam/Yamin Bang Feri</h3>
+                    <p>Mie ayam/yamin bang feri yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 32.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu16">
+                    <img src="/public/images/menu16.jpg" alt="Mie Ayam/Yamin Bakso Urat">
+                    <h3>Mie Ayam/Yamin Bakso Urat</h3>
+                    <p>Mie ayam/yamin bakso urat yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 22.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu17">
+                    <img src="/public/images/menu17.jpg" alt="Mie Ayam/Yamin Bakso Telur">
+                    <h3>Mie Ayam/Yamin Bakso Telur</h3>
+                    <p>Mie ayam/yamin bakso telur yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 27.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu18">
+                    <img src="/public/images/menu18.jpg" alt="Mie Ayam/Yamin Bakso Urat Jumbo">
+                    <h3>Mie Ayam/Yamin Bakso Urat Jumbo</h3>
+                    <p>Mie ayam/yamin bakso urat jumbo yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 29.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu19">
+                    <img src="/public/images/menu19.jpg" alt="Tahu Gejrot">
+                    <h3>Tahu Gejrot</h3>
+                    <p>Tahu gejrot yang diolah dengan cabe dan bumbu cirikhas.</p>
+                    <span>Rp 10.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu20">
+                    <img src="/public/images/menu20.jpg" alt="Es Campur">
+                    <h3>Es Campur</h3>
+                    <p>Es campur nikmati segernya sebuah es.</p>
+                    <span>Rp 15.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu21">
+                    <img src="/public/images/menu21.jpg" alt="Es Kelapa">
+                    <h3>Es Kelapa</h3>
+                    <p>Es kelapa yang diparut dan dicampur dengan es.</p>
+                    <span>Rp 8.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu21">
+                    <img src="/public/images/menu22.jpg" alt="Es Jeruk">
+                    <h3>Es Jeruk</h3>
+                    <p>Es Jeruk yang diolah dengan jeruk yang begitu manis sehingga sensai segar di tenggorokan.</p>
+                    <span>Rp 10.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu23">
+                    <img src="/public/images/menu23.jpg" alt="Lemondane Ice">
+                    <h3>Lemonade Ice</h3>
+                    <p>Lemonade ice parutan lemon yang segar.</p>
+                    <span>Rp 10.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu24">
+                    <img src="/public/images/menu24.jpg" alt="Es Teh Dubai">
+                    <h3>Es Teh Dubai</h3>
+                    <p>Mie goreng yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 5.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu25">
+                    <img src="/public/images/menu25.jpg" alt="Fruit Tea">
+                    <h3>Fruit Tea</h3>
+                    <p>Sosis yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 5.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+                <div class="item-menu" data-id="menu26">
+                    <img src="/public/images/menu26.jpg" alt="Le Mineral">
+                    <h3>Le Mineral</h3>
+                    <p>Sosis yang diolah dengan daging sapi yang kaya rasa.</p>
+                    <span>Rp 5.000</span>
+                    <div class="menu-actions">
+                        <button onclick="openPopup(this)" class="btn-beli">
+                            <img src="/public/icons/basket3.svg" alt="Beli"> Beli
+                        </button>
+                        <button onclick="openPopup(this)" class="btn-keranjang">
+                            <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- Pop-up Modal -->
+       <div class="popup-beli" id="popupBeli" style="display: none;">
+        <div class="popup-content">
+            <button class="close-btn" id="closePopup">&times;</button>
+            <img src="/public/images/menu1.jpg" alt="Bakso Halus" class="popup-image">
+            <h2 id="popup-title">Nama Produk</h2>
+            <p id="popup-price">Rp 0</p>
+            <p id="popup-id" style="display: none;"></p>
+            <div class="quantity-control">
+                <button class="qty-btn" id="decreaseQty">-</button>
+                <input type="text" id="quantity" value="1" readonly>
+                <button class="qty-btn" id="increaseQty">+</button>
+            </div>
+            <div class="btn-actions">
+                <button class="buy-now-btn" id="buyNowBtn">
+                    <img src="/public/icons/basket3.svg" alt="Beli"> Beli Langsung
+                </button>
+                <button onclick="addToCartFromPopup()" class="add-to-cart-btn" id="addToCartBtn">
+                    <img src="/public/icons/cart-plus.svg" alt="Keranjang"> Keranjang
+                </button>
+            </div>
+        </div>
+       </div>
+
+       <!-- Tombol Keranjang untuk Simpan produk -->
+        <div class="cart-icon">
+            <img src="/public/icons/cart-plus.svg" alt="Keranjang" id="cartIcon">
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+        
+       <!-- Popup Keranjang -->
+        <div class="popup-cart" id="popupCart" style="display: none;">
+            <div class="popup-cart-content">
+                <button class="close-cart-btn" id="closeCartBtn">&times;</button>
+                <h2>Keranjang Anda</h2>
+                <div class="cart-items" id="cartItemsContainer">
+                    <p class="empty-cart">Keranjang Kosong, Yuk pilih mau makan apa hari ini!</p>
+                </div>
+                <p>Total: <span id="cartTotal">Rp 0</span></p>
+                <button class="checkout-btn" id="checkoutBtn">Beli</button>
+            </div>
+        </div>
+        
+      <!-- Tombol Scroll ke Atas dengan Bootstrap Icon -->
+        <div class="button-scroll">
+            <button id="scrollToTop" style="display: flex;">
+                <img src="/public/icons/chevron-up.svg" alt="Scroll to top">
+            </button>
+        </div>
+
+
+     <!-- About Us Section -->
+      <section id="about" class="about-us">
+        <h2>Tentang Kami</h2>
+        <p>Bakso Tetelan dan Mie Yamin Bangka Bang Feri berdiri sejak tahun 2020, menyajikan bakso dan mie dengan kualitas terbaik. Kami mengutamakan rasa dan kepuasan pelanggan, sehingga menjadi pilihan utama di daerah ini.</p>
+      </section>
+
+      <!-- Lokasi & Kontak Cepat Section -->
+       <section id="contact" class="location-contact">
+            <h2>Lokasi & Kontak cepat</h2>
+            <div class="location-details">
+                <p>Alamat: JL. Gading Raya No.09, RT.4/RW.10, Pisangan Timur., Kecamatan.Pulo Gadung, Jakarta Timur, Daerah Khusus Ibukota Jakarta 13230.</p>
+                <p>Telepon: 0821 2423 2767</p>
+                <p>Email: -</p>
+                <a href="https://maps.google.com" target="_blank" class="btn-maps">Lihat di Peta</a>
+            </div>
+       </section>
+
+       <!-- Newsletter Section -->
+        <section class="newsletter">
+            <h2>Langganan Newsletter</h2>
+            <p>Dapatkan update terbaru tentang kami melalui newsletter kami.</p>
+            <form action="#" method="post" class="newsletter-form">
+                <input type="email" placeholder="Masukkan email Anda" required>
+                <button type="submit" class="btn-subscribe">Subscribe</button>
+            </form>
+        </section>
+
+        <!-- Komentar Section -->
+         <section class="comments">
+            <h2>Tinggalkan Komentar Anda</h2>
+            <form action="#" method="post" class="comment-form">
+                <textarea placeholder="Tuliskan komentar Anda di sini..." required></textarea>
+                <button type="submit" class="btn-submit">Kirim</button>
+            </form>
+         </section>
+
+    <footer>
+        <p>&copy; 2024 Bakso Tetelan dan Mie Yamin Bang Feri. All Rights Reserved.</p>
+    </footer>
+    <script src="/public/js/script.js"></script>
+</body>
+</html>
