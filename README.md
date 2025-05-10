@@ -22,6 +22,9 @@ Aplikasi pemesanan makanan berbasis web yang responsif dan interaktif. Dirancang
 - 💳 **(Segera Hadir) Gateway Pembayaran API**  
   Akan ditambahkan fitur pembayaran langsung melalui integrasi API.
 
+- 🖼️ **(Segera Hadir) Foto & Deskripsi Produk**  
+  Produk akan dilengkapi dengan gambar dinamis dan deskripsi menarik sesuai data produk.
+
 ---
 
 ## 💡 Teknologi yang Digunakan
