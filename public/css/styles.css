@@ -254,12 +254,12 @@ nav ul li a:hover {
 }
 
 .menu-actions .btn-beli:hover img {
-    content: url('/public/icons/basket3-fill.svg');
+    content: url('/icons/basket3-fill.svg');
     transform: scale(1.1);
 }
 
 .menu-actions .btn-keranjang:hover img {
-    content: url('/public/icons/cart-plus-fill.svg');
+    content: url('/icons/cart-plus-fill.svg');
     transform: scale(1.1);
 }
 
@@ -378,12 +378,12 @@ nav ul li a:hover {
 }
 
 .buy-now-btn:hover img {
-    content: url(/public/icons/basket3-fill.svg);
+    content: url(/icons/basket3-fill.svg);
     transform: scale(1.1);
 }
 
 .add-to-cart-btn:hover img {
-    content: url(/public/icons/cart-plus-fill.svg);
+    content: url(/icons/cart-plus-fill.svg);
     transform: scale(1.1);
 }
 
@@ -437,7 +437,7 @@ nav ul li a:hover {
 }
 
 .cart-icon:hover img {
-    content: url(/public/icons/cart-plus-fill.svg);
+    content: url(/icons/cart-plus-fill.svg);
     transform: scale(1.1)
 }
 
@@ -581,7 +581,7 @@ nav ul li a:hover {
 }
 
 .button-scroll:hover #scrollToTop img {
-    content: url('/public/icons/chevron-double-up.svg');
+    content: url('/icons/chevron-double-up.svg');
 }
 
 /* About Us Section */
