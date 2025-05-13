@@ -148,7 +148,7 @@ document.getElementById('cartIcon').addEventListener('click', () => {
 });
 
 // tutup pop-up keranjang
-document.getElementById('closeCartPopup').addEventListener('click', () => {
+document.getElementById('closeCartBtn').addEventListener('click', () => {
     document.getElementById('cartPopup').style.display = 'none';
 });
 
